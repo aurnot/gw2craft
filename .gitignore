@@ -1,0 +1,13 @@
+# IDE
+*.sublime-*
+
+# vendor
+app/bower_components
+node_modules
+
+# tmp / cache
+.tmp
+.sass-cache
+
+# compiled stuff
+dist
