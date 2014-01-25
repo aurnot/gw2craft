@@ -9,11 +9,11 @@ angular.module('gw2craftApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/stuff', {
+        templateUrl: 'views/stuff.html',
+        controller: 'StuffCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/stuff'
       });
   });

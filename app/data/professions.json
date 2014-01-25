@@ -1,0 +1,50 @@
+[
+  {
+    "id" : "guardian",
+    "name" : "Guardian",
+    "defense" : 1211,
+    "health" : 1645
+  },
+  {
+    "id" : "warrior",
+    "name" : "Warrior",
+    "defense" : 1211,
+    "health" : 9212
+  },
+  {
+    "id" : "ranger",
+    "name" : "Ranger",
+    "defense" : 1064,
+    "health" : 5922
+  },
+  {
+    "id" : "engineer",
+    "name" : "Engineer",
+    "defense" : 1064,
+    "health" : 5922
+  },
+  {
+    "id" : "thief",
+    "name" : "Thief",
+    "defense" : 1064,
+    "health" : 1645
+  },
+  {
+    "id" : "mesmer",
+    "name" : "Mesmer",
+    "defense" : 920,
+    "health" : 5922
+  },
+  {
+    "id" : "necromancer",
+    "name" : "Necromancer",
+    "defense" : 920,
+    "health" : 9212
+  },
+  {
+    "id" : "elementalist",
+    "name" : "Elementalist",
+    "defense" : 920,
+    "health" : 1645
+  }
+]

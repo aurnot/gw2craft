@@ -1,0 +1,19 @@
+<header class="header">
+  <h3 class="text-muted">gw2craft</h3>
+</header>
+
+<section class="content">
+
+  <h4>Profession</h4>
+  <ul class="list-inline">
+      <li class="btn btn-default"
+          ng-repeat="profession in professions"
+          ng-click="setProfession(profession)"
+      >
+          {{ profession.name }}
+      </li>
+  </ul>
+
+  <div gw2-stats></div>
+
+</section>
