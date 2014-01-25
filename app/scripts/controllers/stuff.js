@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gw2craftApp')
-  .controller('StuffCtrl', function ($scope, $http, _, calculator) {
+  .controller('StuffCtrl', function ($scope, $http, calculator, armory) {
 
     // load professions
     $http.get('data/professions.json').success(function(data) {
@@ -11,6 +11,15 @@ angular.module('gw2craftApp')
     // holds all character stats
     $scope.stats = {};
 
+    // holds chosen armor pieces
+    $scope.armor = {};
+
+    // monitor armor changes and update stats accordingly
+    $scope.$watch('armor', function() {
+      calculator.armor = $scope.armor;
+      $scope.stats = calculator.update();
+    }, true);
+
     /**
      * Sets the current profession to the given one, and refreshes stats
      * @param  {Object} profession
@@ -18,6 +27,10 @@ angular.module('gw2craftApp')
     $scope.setProfession = function(profession) {
       calculator.profession = profession;
       $scope.stats = calculator.update();
+    };
+
+    $scope.getItemsForSlot = function(slot) {
+      return armory.getItemsForSlot(slot);
     };
 
   });

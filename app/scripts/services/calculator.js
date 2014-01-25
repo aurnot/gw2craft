@@ -29,14 +29,17 @@ angular.module('gw2craftApp')
 
       profession : null,
 
+      armor : {},
+
       /**
-       * Updates the stats for current profession, then returns them
+       * Updates the stats for current profession and armor, then returns them
        *
        * @return {Object}
        */
       update : function() {
         this._applyBaseStats();
         this._applyProfessionStats();
+        this._applyArmorStats();
         this._calculateStats();
 
         return this.stats;
@@ -64,6 +67,20 @@ angular.module('gw2craftApp')
           this.stats.defense += this.profession.defense;
           this.stats.health += this.profession.health;
         }
+      },
+
+      /**
+       * Applies the stats from armor pieces
+       *
+       * @protected
+       */
+      _applyArmorStats : function() {
+        var self = this;
+        _.each(self.armor, function(armorPiece) {
+          _.each(armorPiece, function(value, stat) {
+            self.stats[stat] += value;
+          });
+        });
       },
 
       /**
