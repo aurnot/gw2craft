@@ -1,0 +1,60 @@
+[
+  {
+    "id" : "berzerker",
+    "name" : "Berzerker",
+    "stats" : {
+      "power" : 56,
+      "precision" : 35,
+      "critDamage" : 5
+    }
+  },
+  {
+    "id" : "soldier",
+    "name" : "Soldier",
+    "stats" : {
+      "power" : 56,
+      "toughness" : 35,
+      "vitality" : 35
+    }
+  },
+  {
+    "id" : "cavalier",
+    "name" : "Cavalier",
+    "stats" : {
+      "power" : 35,
+      "toughness" : 56,
+      "critDamage" : 5
+    }
+  },
+  {
+    "id" : "rabid",
+    "name" : "Rabid",
+    "stats" : {
+      "precision" : 35,
+      "toughness" : 35,
+      "condDamage" : 56
+    }
+  },
+  {
+    "id" : "apothecary",
+    "name" : "Apothecary",
+    "stats" : {
+      "toughness" : 35,
+      "condDamage" : 35,
+      "healPower" : 56
+    }
+  },
+  {
+    "id" : "celestial",
+    "name" : "Celestial",
+    "stats" : {
+      "power" : 22,
+      "precision" : 22,
+      "toughness" : 22,
+      "vitality" : 22,
+      "condDamage" : 22,
+      "healPower" : 22,
+      "critDamage" : 3
+    }
+  }
+]

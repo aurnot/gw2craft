@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gw2craftApp')
-  .factory('armory', function(_) {
+  .factory('armory', function($resource, _) {
 
     /**
      * Builds an armor set with the given 3 stats combination.
@@ -16,12 +16,12 @@ angular.module('gw2craftApp')
     var buildArmorSet = function(name, stat1major, stat2minor, stat3minor) {
       var armorSet = {
         'name' : name,
-        'helmet' : {},
-        'shoulders' : {},
-        'chest' : {},
-        'gauntlets' : {},
-        'leggings' : {},
-        'boots' : {},
+        'helmet' : { name : name, stats : {} },
+        'shoulders' : { name : name, stats : {} },
+        'chest' : { name : name, stats : {} },
+        'gauntlets' : { name : name, stats : {} },
+        'leggings' : { name : name, stats : {} },
+        'boots' : { name : name, stats : {} },
       };
 
       // stats that use regular values
@@ -57,34 +57,51 @@ angular.module('gw2craftApp')
       var isStat2percent = _.contains(armorStatsPercent, stat2minor);
       var isStat3percent = _.contains(armorStatsPercent, stat3minor);
 
-      armorSet.helmet[stat1major] = 47;
-      armorSet.helmet[stat2minor] = isStat2percent ? 2 : 34;
-      armorSet.helmet[stat3minor] = isStat3percent ? 2 : 34;
+      armorSet.helmet.stats[stat1major] = 47;
+      armorSet.helmet.stats[stat2minor] = isStat2percent ? 2 : 34;
+      armorSet.helmet.stats[stat3minor] = isStat3percent ? 2 : 34;
 
-      armorSet.shoulders[stat1major] = 35;
-      armorSet.shoulders[stat2minor] = isStat2percent ? 2 : 25;
-      armorSet.shoulders[stat3minor] = isStat3percent ? 2 : 25;
+      armorSet.shoulders.stats[stat1major] = 35;
+      armorSet.shoulders.stats[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.shoulders.stats[stat3minor] = isStat3percent ? 2 : 25;
 
-      armorSet.chest[stat1major] = 106;
-      armorSet.chest[stat2minor] = isStat2percent ? 5 : 76;
-      armorSet.chest[stat3minor] = isStat3percent ? 5 : 76;
+      armorSet.chest.stats[stat1major] = 106;
+      armorSet.chest.stats[stat2minor] = isStat2percent ? 5 : 76;
+      armorSet.chest.stats[stat3minor] = isStat3percent ? 5 : 76;
 
-      armorSet.gauntlets[stat1major] = 35;
-      armorSet.gauntlets[stat2minor] = isStat2percent ? 2 : 25;
-      armorSet.gauntlets[stat3minor] = isStat3percent ? 2 : 25;
+      armorSet.gauntlets.stats[stat1major] = 35;
+      armorSet.gauntlets.stats[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.gauntlets.stats[stat3minor] = isStat3percent ? 2 : 25;
 
-      armorSet.leggings[stat1major] = 71;
-      armorSet.leggings[stat2minor] = isStat2percent ? 3 : 50;
-      armorSet.leggings[stat3minor] = isStat3percent ? 3 : 50;
+      armorSet.leggings.stats[stat1major] = 71;
+      armorSet.leggings.stats[stat2minor] = isStat2percent ? 3 : 50;
+      armorSet.leggings.stats[stat3minor] = isStat3percent ? 3 : 50;
 
-      armorSet.boots[stat1major] = 35;
-      armorSet.boots[stat2minor] = isStat2percent ? 2 : 25;
-      armorSet.boots[stat3minor] = isStat3percent ? 2 : 25;
+      armorSet.boots.stats[stat1major] = 35;
+      armorSet.boots.stats[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.boots.stats[stat3minor] = isStat3percent ? 2 : 25;
 
       return armorSet;
     };
 
     return {
+
+      amulets : $resource('data/amulets.json', {}, {
+        query : { method : 'GET', params : {}, isArray : true }
+      }),
+
+      rings : $resource('data/rings.json', {}, {
+        query : { method : 'GET', params : {}, isArray : true }
+      }),
+
+      backs : $resource('data/backs.json', {}, {
+        query : { method : 'GET', params : {}, isArray : true }
+      }),
+
+      accessories : $resource('data/accessories.json', {}, {
+        query : { method : 'GET', params : {}, isArray : true }
+      }),
+
       /**
        * The existing armor slots
        *
@@ -138,7 +155,6 @@ angular.module('gw2craftApp')
         _.each(self.armorSets, function(set, id) {
           // ... get the item at the wanted slot
           var item = set[slot];
-          item.name = set.name;
           item.id = id;
           items.push(item);
         });

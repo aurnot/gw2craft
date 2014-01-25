@@ -77,7 +77,7 @@ angular.module('gw2craftApp')
       _applyArmorStats : function() {
         var self = this;
         _.each(self.armor, function(armorPiece) {
-          _.each(armorPiece, function(value, stat) {
+          _.each(armorPiece.stats, function(value, stat) {
             self.stats[stat] += value;
           });
         });

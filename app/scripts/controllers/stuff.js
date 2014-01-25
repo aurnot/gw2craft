@@ -20,6 +20,11 @@ angular.module('gw2craftApp')
       $scope.stats = calculator.update();
     }, true);
 
+    $scope.amulets = armory.amulets.query();
+    $scope.rings = armory.rings.query();
+    $scope.backs = armory.backs.query();
+    $scope.accessories = armory.accessories.query();
+
     /**
      * Sets the current profession to the given one, and refreshes stats
      * @param  {Object} profession

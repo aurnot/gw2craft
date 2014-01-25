@@ -1,0 +1,126 @@
+[
+  {
+    "id" : "berzerker",
+    "name" : "Berzerker",
+    "stats" : {
+      "power" : 126,
+      "precision" : 85,
+      "critDamage" : 9
+    }
+  },
+  {
+    "id" : "berzerker|valkyrie",
+    "name" : "Berzerker (Valkyrie)",
+    "stats" : {
+      "power" : 126,
+      "precision" : 67,
+      "vitality" : 18,
+      "critDamage" : 9
+    }
+  },
+  {
+    "id" : "soldier",
+    "name" : "Soldier",
+    "stats" : {
+      "power" : 126,
+      "toughness" : 85,
+      "vitality" : 85
+    }
+  },
+  {
+    "id" : "oftheknight",
+    "name" : "\"of the Knight\"",
+    "stats" : {
+      "power" : 85,
+      "precision" : 126,
+      "toughness" : 85
+    }
+  },
+  {
+    "id" : "rampager",
+    "name" : "Rampager",
+    "stats" : {
+      "power" : 85,
+      "precision" : 126,
+      "condDamage" : 85
+    }
+  },
+  {
+    "id" : "knight",
+    "name" : "Knight",
+    "stats" : {
+      "power" : 85,
+      "precision" : 85,
+      "toughness" : 126
+    }
+  },
+  {
+    "id" : "cavalier",
+    "name" : "Cavalier",
+    "stats" : {
+      "power" : 85,
+      "toughness" : 126,
+      "critDamage" : 9
+    }
+  },
+  {
+    "id" : "rabid",
+    "name" : "Rabid",
+    "stats" : {
+      "precision" : 85,
+      "toughness" : 85,
+      "condDamage" : 126
+    }
+  },
+  {
+    "id" : "dire|rabid",
+    "name" : "Dire (Rabid)",
+    "stats" : {
+      "precision" : 18,
+      "toughness" : 85,
+      "vitality" : 67,
+      "condDamage" : 126
+    }
+  },
+  {
+    "id" : "rabid|apothecary",
+    "name" : "Rabid (Apothecary)",
+    "stats" : {
+      "precision" : 67,
+      "toughness" : 85,
+      "condDamage" : 112,
+      "healPower" : 32
+    }
+  },
+  {
+    "id" : "cleric",
+    "name" : "Cleric",
+    "stats" : {
+      "power" : 85,
+      "toughness" : 85,
+      "healPower" : 126
+    }
+  },
+  {
+    "id" : "apothecary",
+    "name" : "Apothecary",
+    "stats" : {
+      "toughness" : 85,
+      "condDamage" : 85,
+      "healPower" : 126
+    }
+  },
+  {
+    "id" : "celestial",
+    "name" : "Celestial",
+    "stats" : {
+      "power" : 54,
+      "precision" : 54,
+      "toughness" : 54,
+      "vitality" : 54,
+      "condDamage" : 54,
+      "healPower" : 54,
+      "critDamage" : 7
+    }
+  }
+]
