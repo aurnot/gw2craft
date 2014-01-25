@@ -33,12 +33,12 @@ angular.module('gw2craftApp')
       // special case: all-stats items
       if ('all' === stat1major) {
         _.each(armorStats, function(value) {
-          armorSet.helmet[value] = 20;
-          armorSet.shoulders[value] = 15;
-          armorSet.chest[value] = 45;
-          armorSet.gauntlets[value] = 15;
-          armorSet.leggings[value] = 30;
-          armorSet.boots[value] = 15;
+          armorSet.helmet[value] = 21;
+          armorSet.shoulders[value] = 16;
+          armorSet.chest[value] = 47;
+          armorSet.gauntlets[value] = 16;
+          armorSet.leggings[value] = 31;
+          armorSet.boots[value] = 16;
         });
 
         _.each(armorStatsPercent, function(value) {
@@ -57,29 +57,29 @@ angular.module('gw2craftApp')
       var isStat2percent = _.contains(armorStatsPercent, stat2minor);
       var isStat3percent = _.contains(armorStatsPercent, stat3minor);
 
-      armorSet.helmet[stat1major] = 45;
-      armorSet.helmet[stat2minor] = isStat2percent ? 2 : 32;
-      armorSet.helmet[stat3minor] = isStat3percent ? 2 : 32;
+      armorSet.helmet[stat1major] = 47;
+      armorSet.helmet[stat2minor] = isStat2percent ? 2 : 34;
+      armorSet.helmet[stat3minor] = isStat3percent ? 2 : 34;
 
-      armorSet.shoulders[stat1major] = 34;
-      armorSet.shoulders[stat2minor] = isStat2percent ? 2 : 24;
-      armorSet.shoulders[stat3minor] = isStat3percent ? 2 : 24;
+      armorSet.shoulders[stat1major] = 35;
+      armorSet.shoulders[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.shoulders[stat3minor] = isStat3percent ? 2 : 25;
 
-      armorSet.chest[stat1major] = 101;
-      armorSet.chest[stat2minor] = isStat2percent ? 5 : 72;
-      armorSet.chest[stat3minor] = isStat3percent ? 5 : 72;
+      armorSet.chest[stat1major] = 106;
+      armorSet.chest[stat2minor] = isStat2percent ? 5 : 76;
+      armorSet.chest[stat3minor] = isStat3percent ? 5 : 76;
 
-      armorSet.gauntlets[stat1major] = 34;
-      armorSet.gauntlets[stat2minor] = isStat2percent ? 2 : 24;
-      armorSet.gauntlets[stat3minor] = isStat3percent ? 2 : 24;
+      armorSet.gauntlets[stat1major] = 35;
+      armorSet.gauntlets[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.gauntlets[stat3minor] = isStat3percent ? 2 : 25;
 
-      armorSet.leggings[stat1major] = 67;
-      armorSet.leggings[stat2minor] = isStat2percent ? 3 : 48;
-      armorSet.leggings[stat3minor] = isStat3percent ? 3 : 48;
+      armorSet.leggings[stat1major] = 71;
+      armorSet.leggings[stat2minor] = isStat2percent ? 3 : 50;
+      armorSet.leggings[stat3minor] = isStat3percent ? 3 : 50;
 
-      armorSet.boots[stat1major] = 34;
-      armorSet.boots[stat2minor] = isStat2percent ? 2 : 24;
-      armorSet.boots[stat3minor] = isStat3percent ? 2 : 24;
+      armorSet.boots[stat1major] = 35;
+      armorSet.boots[stat2minor] = isStat2percent ? 2 : 25;
+      armorSet.boots[stat3minor] = isStat3percent ? 2 : 25;
 
       return armorSet;
     };
