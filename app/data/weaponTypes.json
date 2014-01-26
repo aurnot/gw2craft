@@ -1,0 +1,104 @@
+[
+  {
+    "id" : "axe",
+    "name" : "Axe",
+    "slot" : "one-handed",
+    "damages" : [900, 1100]
+  },
+  {
+    "id" : "dagger",
+    "name" : "Dagger",
+    "slot" : "one-handed",
+    "damages" : [970, 1030]
+  },
+  {
+    "id" : "mace",
+    "name" : "Mace",
+    "slot" : "one-handed",
+    "damages" : [940, 1060]
+  },
+  {
+    "id" : "pistol",
+    "name" : "Pistol",
+    "slot" : "one-handed",
+    "damages" : [920, 1080]
+  },
+  {
+    "id" : "sword",
+    "name" : "Sword",
+    "slot" : "one-handed",
+    "damages" : [950, 1050]
+  },
+  {
+    "id" : "scepter",
+    "name" : "Scepter",
+    "slot" : "one-handed",
+    "restriction" : "main-hand",
+    "damages" : [940, 1060]
+  },
+  {
+    "id" : "focus",
+    "name" : "Focus",
+    "slot" : "one-handed",
+    "restriction" : "off-hand",
+    "damages" : [873, 927]
+  },
+  {
+    "id" : "shield",
+    "name" : "Shield",
+    "slot" : "one-handed",
+    "restriction" : "off-hand",
+    "damages" : [846, 954],
+    "defense" : 64
+  },
+  {
+    "id" : "torch",
+    "name" : "Torch",
+    "slot" : "one-handed",
+    "restriction" : "off-hand",
+    "damages" : [828, 972]
+  },
+  {
+    "id" : "warhorn",
+    "name" : "Warhorn",
+    "slot" : "one-handed",
+    "restriction" : "off-hand",
+    "damages" : [855, 945]
+  },
+  {
+    "id" : "greatsword",
+    "name" : "Greatsword",
+    "slot" : "two-handed",
+    "damages" : [1045, 1155]
+  },
+  {
+    "id" : "hammer",
+    "name" : "Hammer",
+    "slot" : "two-handed",
+    "damages" : [1034, 1166]
+  },
+  {
+    "id" : "longbow",
+    "name" : "Long bow",
+    "slot" : "two-handed",
+    "damages" : [966, 1134]
+  },
+  {
+    "id" : "rifle",
+    "name" : "Rifle",
+    "slot" : "two-handed",
+    "damages" : [1035, 1265]
+  },
+  {
+    "id" : "shortbow",
+    "name" : "Short bow",
+    "slot" : "two-handed",
+    "damages" : [950, 1050]
+  },
+  {
+    "id" : "staff",
+    "name" : "Staff",
+    "slot" : "two-handed",
+    "damages" : [1034, 1166]
+  }
+]

@@ -3,6 +3,12 @@
 angular.module('gw2craftApp')
   .factory('armory', function($resource, _) {
 
+    // stats that use regular values
+    var regularStats = ['power', 'precision', 'toughness', 'vitality', 'condDamage', 'healPower'];
+
+    // stats that use percentage values
+    var percentStats = ['critDamage'];
+
     /**
      * Builds an armor set with the given 3 stats combination.
      * Alternatively, 'all' can be specified as first stat to generate the
@@ -24,15 +30,9 @@ angular.module('gw2craftApp')
         'boots' : { name : name, stats : {} },
       };
 
-      // stats that use regular values
-      var armorStats = ['power', 'precision', 'toughness', 'vitality', 'condDamage', 'healPower'];
-
-      // stats that use percentage values
-      var armorStatsPercent = ['critDamage'];
-
       // special case: all-stats items
       if ('all' === stat1major) {
-        _.each(armorStats, function(value) {
+        _.each(regularStats, function(value) {
           armorSet.helmet[value] = 21;
           armorSet.shoulders[value] = 16;
           armorSet.chest[value] = 47;
@@ -41,7 +41,7 @@ angular.module('gw2craftApp')
           armorSet.boots[value] = 16;
         });
 
-        _.each(armorStatsPercent, function(value) {
+        _.each(percentStats, function(value) {
           armorSet.helmet[value] = 3;
           armorSet.shoulders[value] = 2;
           armorSet.chest[value] = 6;
@@ -54,8 +54,8 @@ angular.module('gw2craftApp')
       }
 
       // generic case
-      var isStat2percent = _.contains(armorStatsPercent, stat2minor);
-      var isStat3percent = _.contains(armorStatsPercent, stat3minor);
+      var isStat2percent = _.contains(percentStats, stat2minor);
+      var isStat3percent = _.contains(percentStats, stat3minor);
 
       armorSet.helmet.stats[stat1major] = 47;
       armorSet.helmet.stats[stat2minor] = isStat2percent ? 2 : 34;
@@ -82,6 +82,45 @@ angular.module('gw2craftApp')
       armorSet.boots.stats[stat3minor] = isStat3percent ? 2 : 25;
 
       return armorSet;
+    };
+
+    var buildWeapons = function(data) {
+      var oneHanded = {
+        id : data.id,
+        name : data.name,
+        slot : 'one-handed',
+        stats : {}
+      };
+      var twoHanded = {
+        id : data.id,
+        name : data.name,
+        slot : 'two-handed',
+        stats : {}
+      };
+
+      if ('all' === data.primary) {
+        // special case: small bonus to all stats
+        _.each(regularStats, function(stat) {
+          oneHanded.stats[stat] = 42;
+          twoHanded.stats[stat] = 84;
+        });
+        _.each(percentStats, function(stat) {
+          oneHanded.stats[stat] = 5;
+          twoHanded.stats[stat] = 10;
+        });
+      } else {
+        // generic case
+        var isMinor1Percent = _.contains(percentStats, data.minor1);
+        var isMinor2Percent = _.contains(percentStats, data.minor2);
+        oneHanded.stats[data.major] = 94;
+        oneHanded.stats[data.minor1] = isMinor1Percent ? 5 : 67;
+        oneHanded.stats[data.minor2] = isMinor2Percent ? 5 : 67;
+        twoHanded.stats[data.major] = 188;
+        twoHanded.stats[data.minor1] = isMinor1Percent ? 10 : 134;
+        twoHanded.stats[data.minor2] = isMinor2Percent ? 10 : 134;
+      }
+
+      return [oneHanded, twoHanded];
     };
 
     return {
@@ -140,6 +179,130 @@ angular.module('gw2craftApp')
         'magi': buildArmorSet('Magi - Hronk', 'healPower', 'precision', 'vitality'),
         'celestial': buildArmorSet('Celestial - Wupwup', 'all')
       },
+
+      weaponSets : _.union(
+        buildWeapons({
+          id : 'berzerker',
+          name : 'Berzerker - Zojja',
+          major : 'power',
+          minor1 : 'precision',
+          minor2 : 'critDamage'
+        }),
+        buildWeapons({
+          id : 'soldier',
+          name : 'Soldier - Chorben',
+          major : 'power',
+          minor1 : 'toughness',
+          minor2 : 'vitality'
+        }),
+        buildWeapons({
+          id : 'valkyrie',
+          name : 'Valkyrie - Stonecleaver',
+          major : 'power',
+          minor1 : 'vitality',
+          minor2 : 'critDamage'
+        }),
+        buildWeapons({
+          id : 'assassin',
+          name : 'Assassin - Soros',
+          major : 'precision',
+          minor1 : 'power',
+          minor2 : 'critDamage'
+        }),
+        buildWeapons({
+          id : 'rampager',
+          name : 'Rampager - Coalforge',
+          major : 'precision',
+          minor1 : 'power',
+          minor2 : 'condDamage'
+        }),
+        buildWeapons({
+          id : 'cavalier',
+          name : 'Cavalier - Angchu',
+          major : 'toughness',
+          minor1 : 'power',
+          minor2 : 'critDamage'
+        }),
+        buildWeapons({
+          id : 'knight',
+          name : 'Knight - Beigarth',
+          major : 'toughness',
+          minor1 : 'power',
+          minor2 : 'precision'
+        }),
+        buildWeapons({
+          id : 'settler',
+          name : 'Settler - Leftpaw',
+          major : 'toughness',
+          minor1 : 'condDamage',
+          minor2 : 'healPower'
+        }),
+        buildWeapons({
+          id : 'sentinel',
+          name : 'Sentinel - Tonn',
+          major : 'vitality',
+          minor1 : 'power',
+          minor2 : 'toughness'
+        }),
+        buildWeapons({
+          id : 'shaman',
+          name : 'Shaman - Zintl',
+          major : 'vitality',
+          minor1 : 'condDamage',
+          minor2 : 'healPower'
+        }),
+        buildWeapons({
+          id : 'carrion',
+          name : 'Carrion - Occam',
+          major : 'condDamage',
+          minor1 : 'power',
+          minor2 : 'vitality'
+        }),
+        buildWeapons({
+          id : 'dire',
+          name : 'Dire - Mathilde',
+          major : 'condDamage',
+          minor1 : 'toughness',
+          minor2 : 'vitality'
+        }),
+        buildWeapons({
+          id : 'rabid',
+          name : 'Rabid - Grizzlemouth',
+          major : 'condDamage',
+          minor1 : 'precision',
+          minor2 : 'toughness'
+        }),
+        buildWeapons({
+          id : 'apothecary',
+          name : 'Apothecary - Ebonmane',
+          major : 'healPower',
+          minor1 : 'toughness',
+          minor2 : 'condDamage'
+        }),
+        buildWeapons({
+          id : 'cleric',
+          name : 'Cleric - Theodosus',
+          major : 'healPower',
+          minor1 : 'power',
+          minor2 : 'toughness'
+        }),
+        buildWeapons({
+          id : 'magi',
+          name : 'Magi - Hronk',
+          major : 'healPower',
+          minor1 : 'precision',
+          minor2 : 'vitality'
+        }),
+        buildWeapons({
+          id : 'celestial',
+          name : 'Celestial - Wupwup',
+          major : 'all'
+        })
+      ),
+
+      weaponTypes : $resource('data/weaponTypes.json', {}, {
+        query : { method : 'GET', params : {}, isArray : true }
+      }),
 
       /**
        * Parses the armor sets to gather all items for the given slot

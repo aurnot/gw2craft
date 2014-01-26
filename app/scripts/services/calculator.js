@@ -31,6 +31,8 @@ angular.module('gw2craftApp')
 
       armor : {},
 
+      weapons : {},
+
       /**
        * Updates the stats for current profession and armor, then returns them
        *
@@ -40,6 +42,7 @@ angular.module('gw2craftApp')
         this._applyBaseStats();
         this._applyProfessionStats();
         this._applyArmorStats();
+        this._applyWeaponsStats();
         this._calculateStats();
 
         return this.stats;
@@ -77,10 +80,29 @@ angular.module('gw2craftApp')
       _applyArmorStats : function() {
         var self = this;
         _.each(self.armor, function(armorPiece) {
+          // skip piece if not present (item has been unset)
+          if (!armorPiece) {
+            return;
+          }
+
           _.each(armorPiece.stats, function(value, stat) {
             self.stats[stat] += value;
           });
         });
+      },
+
+      _applyWeaponsStats : function() {
+        var self = this;
+        if (self.weapons.mainHandSet) {
+          _.each(self.weapons.mainHandSet.stats, function(value, stat) {
+            self.stats[stat] += value;
+          });
+        }
+        if (self.weapons.offHandSet) {
+          _.each(self.weapons.offHandSet.stats, function(value, stat) {
+            self.stats[stat] += value;
+          });
+        }
       },
 
       /**
