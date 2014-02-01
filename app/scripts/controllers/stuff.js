@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gw2craftApp')
-  .controller('StuffCtrl', function ($scope, $http, calculator, armory) {
+  .controller('StuffCtrl', function ($scope, $http, _, calculator, armory) {
 
     // load professions
     $http.get('data/professions.json').success(function(data) {
@@ -57,6 +57,29 @@ angular.module('gw2craftApp')
 
       // check if item is allowed for the current slot
       return $scope.weapons.mainHandType.slot === item.slot;
+    };
+
+    /**
+     * Filters list of weapon types for the given hand, based on the current
+     * profession
+     *
+     * @param  {String} hand 'main-hand' | 'off-hand'
+     * @return {Boolean} Whether the item type is available for the profession
+     * and hand
+     */
+    $scope.availableForProfession = function(hand) {
+      return function(item) {
+        if ($scope.profession) {
+          // check if item type is allowed for the current profession
+          if ('main-hand' === hand) {
+            return _.contains($scope.profession.mainHand, item.id);
+          } else if ('off-hand' === hand) {
+            return _.contains($scope.profession.offHand, item.id);
+          }
+        }
+
+        return false;
+      }
     };
 
     /**

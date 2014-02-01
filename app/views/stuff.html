@@ -146,7 +146,8 @@
           <label for="main-hand-type" class="control-label">Main hand type</label>
           <select id="main-hand-type" class="form-control"
             ng-model="weapons.mainHandType"
-            ng-options="item.name for item in weaponTypes | filter: { 'restriction' : '!off-hand' }"
+            ng-options="item.name for item in weaponTypes | filter: { 'restriction' : '!off-hand' } | filter:availableForProfession('main-hand')"
+            ng-disabled="!profession"
           >
             <option value=""></option>
           </select>
@@ -169,7 +170,7 @@
           <label for="off-hand-type" class="control-label">Off hand type</label>
           <select id="off-hand-type" class="form-control"
             ng-model="weapons.offHandType"
-            ng-options="item.name for item in weaponTypes | filter: { 'slot' : 'one-handed' }"
+            ng-options="item.name for item in weaponTypes | filter: { 'slot' : 'one-handed' } | filter:availableForProfession('off-hand')"
             ng-disabled="weapons.mainHandType.slot !== 'one-handed'"
           >
             <option value=""></option>

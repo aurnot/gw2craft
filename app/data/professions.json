@@ -3,48 +3,64 @@
     "id" : "guardian",
     "name" : "Guardian",
     "defense" : 1211,
-    "health" : 1645
+    "health" : 1645,
+    "mainHand" : [ "mace", "sword", "scepter", "greatsword", "hammer", "staff" ],
+    "offHand" : [ "focus", "shield", "torch" ]
   },
   {
     "id" : "warrior",
     "name" : "Warrior",
     "defense" : 1211,
-    "health" : 9212
+    "health" : 9212,
+    "mainHand" : [ "axe", "mace", "sword", "greatsword", "hammer", "longbow", "rifle" ],
+    "offHand" : [ "axe", "mace", "sword", "shield", "warhorn" ]
   },
   {
     "id" : "ranger",
     "name" : "Ranger",
     "defense" : 1064,
-    "health" : 5922
+    "health" : 5922,
+    "mainHand" : [ "axe", "sword", "greatsword", "longbow", "shortbow" ],
+    "offHand" : [ "axe", "dagger", "torch", "warhorn" ]
   },
   {
     "id" : "engineer",
     "name" : "Engineer",
     "defense" : 1064,
-    "health" : 5922
+    "health" : 5922,
+    "mainHand" : [ "pistol", "rifle" ],
+    "offHand" : [ "pistol", "shield" ]
   },
   {
     "id" : "thief",
     "name" : "Thief",
     "defense" : 1064,
-    "health" : 1645
+    "health" : 1645,
+    "mainHand" : [ "dagger", "pistol", "sword", "shortbow" ],
+    "offHand" : [ "dagger", "pistol" ]
   },
   {
     "id" : "mesmer",
     "name" : "Mesmer",
     "defense" : 920,
-    "health" : 5922
+    "health" : 5922,
+    "mainHand" : [ "sword", "scepter", "greatsword", "staff" ],
+    "offHand" : [ "pistol", "sword", "focus", "torch" ]
   },
   {
     "id" : "necromancer",
     "name" : "Necromancer",
     "defense" : 920,
-    "health" : 9212
+    "health" : 9212,
+    "mainHand" : [ "axe", "dagger", "scepter", "staff" ],
+    "offHand" : [ "dagger", "focus", "warhorn" ]
   },
   {
     "id" : "elementalist",
     "name" : "Elementalist",
     "defense" : 920,
-    "health" : 1645
+    "health" : 1645,
+    "mainHand" : [ "dagger", "scepter", "focus", "staff" ],
+    "offHand" : [ "dagger", "focus" ]
   }
 ]
