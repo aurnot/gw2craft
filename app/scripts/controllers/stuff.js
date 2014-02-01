@@ -8,6 +8,9 @@ angular.module('gw2craftApp')
       $scope.professions = data;
     });
 
+    // holds current profession
+    $scope.profession = null;
+
     // holds all character stats
     $scope.stats = {};
 
@@ -61,6 +64,7 @@ angular.module('gw2craftApp')
      * @param  {Object} profession
      */
     $scope.setProfession = function(profession) {
+      $scope.profession = profession;
       calculator.profession = profession;
       $scope.stats = calculator.update();
     };
