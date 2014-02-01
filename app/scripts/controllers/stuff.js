@@ -9,16 +9,16 @@ angular.module('gw2craftApp')
     });
 
     // holds current profession
-    $scope.profession = null;
+    $scope.profession = calculator.profession;
 
     // holds all character stats
-    $scope.stats = {};
+    $scope.stats = calculator.stats;
 
     // holds chosen armor pieces
-    $scope.armor = {};
+    $scope.armor = calculator.armor;
 
     // holds chosen weapons
-    $scope.weapons = {};
+    $scope.weapons = calculator.weapons;
 
     $scope.amulets = armory.amulets.query();
     $scope.rings = armory.rings.query();
@@ -30,8 +30,7 @@ angular.module('gw2craftApp')
 
     // monitor armor changes and update stats accordingly
     $scope.$watch('armor', function() {
-      calculator.armor = $scope.armor;
-      $scope.stats = calculator.update();
+      calculator.update();
     }, true);
 
     // monitor weapon changes and update stats accordingly
@@ -41,8 +40,7 @@ angular.module('gw2craftApp')
         $scope.weapons.offHandType = null;
         $scope.weapons.offHandSet = null;
       }
-      calculator.weapons = $scope.weapons;
-      $scope.stats = calculator.update();
+      calculator.update();
     }, true);
 
     /**
@@ -87,9 +85,8 @@ angular.module('gw2craftApp')
      * @param  {Object} profession
      */
     $scope.setProfession = function(profession) {
-      $scope.profession = profession;
       calculator.profession = profession;
-      $scope.stats = calculator.update();
+      calculator.update();
     };
 
     $scope.getItemsForSlot = function(slot) {
