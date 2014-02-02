@@ -127,19 +127,19 @@ angular.module('gw2craftApp')
 
       amulets : $resource('data/amulets.json', {}, {
         query : { method : 'GET', params : {}, isArray : true }
-      }),
+      }).query(),
 
       rings : $resource('data/rings.json', {}, {
         query : { method : 'GET', params : {}, isArray : true }
-      }),
+      }).query(),
 
       backs : $resource('data/backs.json', {}, {
         query : { method : 'GET', params : {}, isArray : true }
-      }),
+      }).query(),
 
       accessories : $resource('data/accessories.json', {}, {
         query : { method : 'GET', params : {}, isArray : true }
-      }),
+      }).query(),
 
       /**
        * The existing armor slots
@@ -302,7 +302,7 @@ angular.module('gw2craftApp')
 
       weaponTypes : $resource('data/weaponTypes.json', {}, {
         query : { method : 'GET', params : {}, isArray : true }
-      }),
+      }).query(),
 
       /**
        * Parses the armor sets to gather all items for the given slot
