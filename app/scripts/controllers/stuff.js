@@ -33,12 +33,30 @@ angular.module('gw2craftApp')
     }, true);
 
     // monitor weapon changes and update stats accordingly
-    $scope.$watch('weapons', function() {
+    $scope.$watch('weapons', function(newWeapons, oldWeapons) {
       // reset offhand if mainhand is not one-handed
       if ($scope.weapons.mainHandType && $scope.weapons.mainHandType.slot !== 'one-handed') {
         $scope.weapons.offHandType = null;
         $scope.weapons.offHandSet = null;
       }
+
+      // reset mainhand stats if no type selected
+      if (!$scope.weapons.mainHandType) {
+        $scope.weapons.mainHandSet = null;
+      }
+
+      // reset offhand stats if no type selected
+      if (!$scope.weapons.offHandType) {
+        $scope.weapons.offHandSet = null;
+      }
+
+      if (newWeapons.mainHandType && oldWeapons.mainHandType) {
+        // reset mainhand stats when changing slot (one-handed/two-handed)
+        if (newWeapons.mainHandType.slot != oldWeapons.mainHandType.slot) {
+          $scope.weapons.mainHandSet = null;
+        }
+      }
+
       calculator.update();
     }, true);
 
@@ -69,9 +87,9 @@ angular.module('gw2craftApp')
         if ($scope.profession) {
           // check if item type is allowed for the current profession
           if ('main-hand' === hand) {
-            return _.contains($scope.profession.mainHand, item.id);
+            return game.professionCanWieldWeapon($scope.profession, item, 'main-hand');
           } else if ('off-hand' === hand) {
-            return _.contains($scope.profession.offHand, item.id);
+            return game.professionCanWieldWeapon($scope.profession, item, 'off-hand');
           }
         }
 
@@ -86,6 +104,18 @@ angular.module('gw2craftApp')
     $scope.setProfession = function(profession) {
       $scope.profession = profession;
       calculator.profession = profession;
+
+      if ($scope.weapons.mainHandType) {
+        if (!game.professionCanWieldWeapon(profession, $scope.weapons.mainHandType, 'main-hand')) {
+          $scope.weapons.mainHandType = null;
+        }
+      }
+      if ($scope.weapons.offHandType) {
+        if (!game.professionCanWieldWeapon(profession, $scope.weapons.offHandType, 'off-hand')) {
+          $scope.weapons.offHandType = null;
+        }
+      }
+
       calculator.update();
     };
 

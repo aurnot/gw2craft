@@ -187,7 +187,7 @@
           <select id="off-hand-type" class="form-control"
             ng-model="weapons.offHandType"
             ng-options="item.name for item in weaponTypes | filter: { 'slot' : 'one-handed' } | filter:availableForProfession('off-hand')"
-            ng-disabled="weapons.mainHandType.slot !== 'one-handed'"
+            ng-disabled="!profession || weapons.mainHandType.slot == 'two-handed'"
           >
             <option value=""></option>
           </select>
@@ -197,7 +197,7 @@
           <select id="off-hand-stats" class="form-control"
             ng-model="weapons.offHandSet"
             ng-options="item.name for item in weaponSets | filter: { 'slot' : 'one-handed' }"
-            ng-disabled="!weapons.offHandType  || (weapons.mainHandType.slot !== 'one-handed')"
+            ng-disabled="!weapons.offHandType || (weapons.mainHandType.slot == 'two-handed')"
           >
             <option value=""></option>
           </select>
