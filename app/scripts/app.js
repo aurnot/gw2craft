@@ -13,6 +13,10 @@ angular.module('gw2craftApp', [
         templateUrl: 'views/stuff.html',
         controller: 'StuffCtrl'
       })
+      .when('/traits', {
+        templateUrl: 'views/traits.html',
+        controller: 'TraitsCtrl'
+      })
       .otherwise({
         redirectTo: '/stuff'
       });

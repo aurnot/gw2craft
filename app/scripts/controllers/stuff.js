@@ -85,6 +85,7 @@ angular.module('gw2craftApp')
      * @param  {Object} profession
      */
     $scope.setProfession = function(profession) {
+      $scope.profession = profession;
       calculator.profession = profession;
       calculator.update();
     };
