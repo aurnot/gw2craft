@@ -4,20 +4,47 @@ angular.module('gw2craftApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute',
+  'ui.router',
   'underscore'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/stuff', {
-        templateUrl: 'views/stuff.html',
-        controller: 'StuffCtrl'
+
+  .config(function ($stateProvider, $urlRouterProvider) {
+    // default url
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+      .state('base', {
+        url: '/',
+        templateUrl: '/views/base.html',
+        controller: 'BaseCtrl'
       })
-      .when('/traits', {
-        templateUrl: 'views/traits.html',
-        controller: 'TraitsCtrl'
+
+      .state('base.profession', {
+        url: 'profession',
+        views: {
+          content: {
+            templateUrl: '/views/profession/profession.html',
+            controller: 'ProfessionCtrl'
+          }
+        }
       })
-      .otherwise({
-        redirectTo: '/stuff'
-      });
+      .state('base.armor', {
+        url: 'armor',
+        views: {
+          content: {
+            templateUrl: '/views/armor/armor.html',
+            controller: 'ArmorCtrl'
+          }
+        }
+      })
+      .state('base.weapons', {
+        url: 'weapons',
+        views: {
+          content: {
+            templateUrl: '/views/weapon/weapon.html',
+            controller: 'WeaponCtrl'
+          }
+        }
+      })
+    ;
   });

@@ -1,0 +1,47 @@
+<h3>Weapons</h3>
+
+<div class="row">
+  <div class="col-xs-6">
+    <label for="main-hand-type" class="control-label">Main hand type</label>
+    <select id="main-hand-type" class="form-control"
+      ng-model="weapons.mainHandType"
+      ng-options="item.name for item in weaponTypes | filter: { 'restriction' : '!off-hand' } | filter:availableForProfession('main-hand')"
+      ng-disabled="!shared.profession"
+    >
+      <option value=""></option>
+    </select>
+  </div>
+  <div class="col-xs-6">
+    <label for="main-hand-stats" class="control-label">Main hand stats</label>
+    <select id="main-hand-stats" class="form-control"
+      ng-model="weapons.mainHandSet"
+      ng-options="item.name for item in weaponSets | filter:availableInMainHand"
+      ng-disabled="!weapons.mainHandType"
+    >
+      <option value=""></option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <label for="off-hand-type" class="control-label">Off hand type</label>
+    <select id="off-hand-type" class="form-control"
+      ng-model="weapons.offHandType"
+      ng-options="item.name for item in weaponTypes | filter: { 'slot' : 'one-handed' } | filter:availableForProfession('off-hand')"
+      ng-disabled="!shared.profession || weapons.mainHandType.slot == 'two-handed'"
+    >
+      <option value=""></option>
+    </select>
+  </div>
+  <div class="col-xs-6">
+    <label for="off-hand-stats" class="control-label">Off hand stats</label>
+    <select id="off-hand-stats" class="form-control"
+      ng-model="weapons.offHandSet"
+      ng-options="item.name for item in weaponSets | filter: { 'slot' : 'one-handed' }"
+      ng-disabled="!weapons.offHandType || (weapons.mainHandType.slot == 'two-handed')"
+    >
+      <option value=""></option>
+    </select>
+  </div>
+</div>

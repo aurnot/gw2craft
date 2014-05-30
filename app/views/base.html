@@ -1,0 +1,23 @@
+<header class="header">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <a ui-sref="base" class="navbar-brand">GW2Craft</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-sm-push-9">
+      <nav class="navigation" ng-include=" '/views/navigation.html' "></nav>
+    </div>
+    <div class="col-sm-9 col-sm-pull-3">
+      <section class="content" ui-view="content"></section>
+      <section class="stats">
+        <div gw2-stats stats="shared.stats"></div>
+      </section>
+    </div>
+  </div>
+</div>

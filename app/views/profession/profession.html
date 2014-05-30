@@ -1,0 +1,11 @@
+<h3>Profession</h3>
+
+<div class="btn-group">
+  <button class="btn btn-default"
+    ng-repeat="profession in professions"
+    ng-click="setProfession(profession)"
+    ng-class="{ 'active': profession.id == shared.profession.id }"
+  >
+    {{ profession.name }}
+  </button>
+</div>

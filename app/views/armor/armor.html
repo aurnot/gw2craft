@@ -1,0 +1,123 @@
+<h3>Armor</h3>
+
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-md-4 col-xs-6">
+        <label for="helmet" class="control-label">Helmet</label>
+        <select id="helmet" class="form-control"
+          ng-model="armor.helmet"
+          ng-options="item.name for item in getItemsForSlot('helmet')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="shoulders" class="control-label">Shoulders</label>
+        <select id="shoulders" class="form-control"
+          ng-model="armor.shoulders"
+          ng-options="item.name for item in getItemsForSlot('shoulders')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="chest" class="control-label">Chest</label>
+        <select id="chest" class="form-control"
+          ng-model="armor.chest"
+          ng-options="item.name for item in getItemsForSlot('chest')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="gauntlets" class="control-label">Gauntlets</label>
+        <select id="gauntlets" class="form-control"
+          ng-model="armor.gauntlets"
+          ng-options="item.name for item in getItemsForSlot('gauntlets')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="leggings" class="control-label">Leggings</label>
+        <select id="leggings" class="form-control"
+          ng-model="armor.leggings"
+          ng-options="item.name for item in getItemsForSlot('leggings')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="boots" class="control-label">Boots</label>
+        <select id="boots" class="form-control"
+          ng-model="armor.boots"
+          ng-options="item.name for item in getItemsForSlot('boots')"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-md-4 col-xs-6">
+        <label for="amulet" class="control-label">Amulet</label>
+        <select id="amulet" class="form-control"
+          ng-model="armor.amulet"
+          ng-options="item.name for item in amulets"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="ring1" class="control-label">Ring 1</label>
+        <select id="ring1" class="form-control"
+          ng-model="armor.ring1"
+          ng-options="item.name for item in rings"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="ring2" class="control-label">Ring 2</label>
+        <select id="ring2" class="form-control"
+          ng-model="armor.ring2"
+          ng-options="item.name for item in rings"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="back" class="control-label">Back</label>
+        <select id="back" class="form-control"
+          ng-model="armor.back"
+          ng-options="item.name for item in backs"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="accessory1" class="control-label">Accessory 1</label>
+        <select id="accessory1" class="form-control"
+          ng-model="armor.accessory1"
+          ng-options="item.name for item in accessories"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <label for="accessory2" class="control-label">Accessory 2</label>
+        <select id="accessory2" class="form-control"
+          ng-model="armor.accessory2"
+          ng-options="item.name for item in accessories"
+        >
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+</div>
