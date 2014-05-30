@@ -19,19 +19,8 @@ angular.module('gw2craftApp')
      * @param {Object} profession
      */
     $scope.setProfession = function (profession) {
-      var isSame = ($scope.shared.profession && profession && $scope.shared.profession.id === profession.id);
       $scope.shared.profession = profession;
-      calculator.profession = profession;
-
-      // reset weapons on profession change
-      // @todo move this inside service
-      if (!isSame) {
-        calculator.weapons.mainHandType = null;
-        calculator.weapons.offHandType = null;
-        calculator.weapons.mainHandSet = null;
-        calculator.weapons.offHandSet = null;
-      }
-
+      calculator.setProfession(profession);
       calculator.update();
     };
 
