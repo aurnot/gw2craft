@@ -5,7 +5,7 @@ angular.module('gw2craftApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'underscore'
+  'lodash'
 ])
 
   .config(function ($stateProvider, $urlRouterProvider) {

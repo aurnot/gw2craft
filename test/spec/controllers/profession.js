@@ -1,11 +1,11 @@
 'use strict';
 
-describe('Controller: StuffCtrl', function () {
+describe('Controller: ProfessionCtrl', function () {
 
   // load the controller's module
   beforeEach(module('gw2craftApp'));
 
-  var StuffCtrl,
+  var ProfessionCtrl,
     httpBackend,
     scope;
 
@@ -19,13 +19,13 @@ describe('Controller: StuffCtrl', function () {
       ]);
 
     scope = $rootScope.$new();
-    StuffCtrl = $controller('StuffCtrl', {
+    ProfessionCtrl = $controller('ProfessionCtrl', {
       $scope: scope
     });
   }));
 
   it('should fetch professions from xhr', function () {
-    expect(scope.professions).toBeUndefined();
+    expect(scope.professions.length).toBe(0);
     httpBackend.flush();
     expect(scope.professions.length).toBe(2);
   });
