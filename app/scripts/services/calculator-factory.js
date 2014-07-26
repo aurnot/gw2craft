@@ -57,7 +57,7 @@ angular.module('gw2craftApp')
           calculator.stats[stat] += value;
         });
       }
-    }
+    };
 
     /**
      * Calculates derived stats
@@ -83,7 +83,7 @@ angular.module('gw2craftApp')
       var vitality = calculator.stats.vitality;
       var health = 10 * vitality;
       calculator.stats.health += health; // add vita health to base pool
-    }
+    };
 
 
     // -------------------------------------------------------------------------

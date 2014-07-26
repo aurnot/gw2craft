@@ -11,7 +11,7 @@ angular.module('gw2craftApp')
     ctrl.init = function () {
       // expose profession list
       $scope.professions = game.professions;
-    }
+    };
 
     /**
      * Sets the current profession, and update stats accordingly

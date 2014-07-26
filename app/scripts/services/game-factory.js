@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('gw2craftApp')
-  .factory('game', function($resource) {
+  .factory('game', function ($resource, _) {
     var professions = $resource('data/professions.json', {}, {
       query : { method : 'GET', params : {}, isArray : true }
     }).query();
@@ -15,10 +15,10 @@ angular.module('gw2craftApp')
      * @return {Boolean}
      */
     var professionCanWieldWeapon = function(profession, weapon, hand) {
-      if ('main-hand' == hand) {
-        return _.contains(profession.mainHand, weapon.id)
-      } else if ('off-hand' == hand) {
-        return _.contains(profession.offHand, weapon.id)
+      if ('main-hand' === hand) {
+        return _.contains(profession.mainHand, weapon.id);
+      } else if ('off-hand' === hand) {
+        return _.contains(profession.offHand, weapon.id);
       }
 
       return false;

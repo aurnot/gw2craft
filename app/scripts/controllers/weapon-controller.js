@@ -76,7 +76,7 @@ angular.module('gw2craftApp')
         }
 
         return false;
-      }
+      };
     };
 
     this.init();
