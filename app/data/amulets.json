@@ -5,7 +5,7 @@
     "stats" : {
       "power" : 126,
       "precision" : 85,
-      "critDamage" : 9
+      "ferocity" : 85
     }
   },
   {
@@ -15,7 +15,7 @@
       "power" : 126,
       "precision" : 67,
       "vitality" : 18,
-      "critDamage" : 9
+      "ferocity" : 85
     }
   },
   {
@@ -60,7 +60,7 @@
     "stats" : {
       "power" : 85,
       "toughness" : 126,
-      "critDamage" : 9
+      "ferocity" : 85
     }
   },
   {
@@ -114,13 +114,13 @@
     "id" : "celestial",
     "name" : "Celestial",
     "stats" : {
-      "power" : 54,
-      "precision" : 54,
-      "toughness" : 54,
-      "vitality" : 54,
-      "condDamage" : 54,
-      "healPower" : 54,
-      "critDamage" : 7
+      "power" : 57,
+      "precision" : 57,
+      "toughness" : 57,
+      "vitality" : 57,
+      "condDamage" : 57,
+      "healPower" : 57,
+      "ferocity" : 57
     }
   }
 ]

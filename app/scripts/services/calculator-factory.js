@@ -73,6 +73,11 @@ angular.module('gw2craftApp')
       var critChance = Math.floor((precision - 822) / 21);
       calculator.stats.critChance = critChance;
 
+      // crit damage
+      var ferocity = calculator.stats.ferocity;
+      var critDamage = Math.floor(ferocity / 15) + 150;
+      calculator.stats.critDamage = critDamage;
+
       // armor
       var toughness = calculator.stats.toughness;
       var defense = calculator.stats.defense;
@@ -115,10 +120,11 @@ angular.module('gw2craftApp')
      * @property {Integer} calculator.baseStats.toughness   Toughness (primary stat)
      * @property {Integer} calculator.baseStats.vitality    Vitality (primary stat)
      * @property {Integer} calculator.baseStats.condDamage  Condition damage (secondary stat)
-     * @property {Integer} calculator.baseStats.critDamage  Critical damage (secondary stat)
+     * @property {Integer} calculator.baseStats.ferocity    Ferocity (secondary stat)
      * @property {Integer} calculator.baseStats.healPower   Healing power (secondary stat)
      * @property {Integer} calculator.baseStats.attack      Attack (derived stat)
      * @property {Integer} calculator.baseStats.critChance  Critical chance (derived stat)
+     * @property {Integer} calculator.baseStats.critDamage  Critical damage (derived stat)
      * @property {Integer} calculator.baseStats.armor       Armor (derived stat)
      * @property {Integer} calculator.baseStats.health      Health (derived stat)
      * @property {Integer} calculator.baseStats.defense     Defense
@@ -135,12 +141,13 @@ angular.module('gw2craftApp')
 
       // secondary
       condDamage : 0,
-      critDamage : 0,
+      ferocity: 0,
       healPower : 0,
 
       // derived
       attack : 0,
       critChance : 0,
+      critDamage : 0,
       armor : 0,
       health : 0,
 
