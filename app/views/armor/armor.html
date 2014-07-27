@@ -8,7 +8,7 @@
         <label for="helmet" class="control-label">Helmet</label>
         <select id="helmet" class="form-control"
           ng-model="armor.helmet"
-          ng-options="item.name for item in getItemsForSlot('helmet')"
+          ng-options="item.name for item in helmets"
         >
           <option value=""></option>
         </select>
@@ -17,7 +17,7 @@
         <label for="shoulders" class="control-label">Shoulders</label>
         <select id="shoulders" class="form-control"
           ng-model="armor.shoulders"
-          ng-options="item.name for item in getItemsForSlot('shoulders')"
+          ng-options="item.name for item in shoulders"
         >
           <option value=""></option>
         </select>
@@ -26,7 +26,7 @@
         <label for="chest" class="control-label">Chest</label>
         <select id="chest" class="form-control"
           ng-model="armor.chest"
-          ng-options="item.name for item in getItemsForSlot('chest')"
+          ng-options="item.name for item in chests"
         >
           <option value=""></option>
         </select>
@@ -35,7 +35,7 @@
         <label for="gauntlets" class="control-label">Gauntlets</label>
         <select id="gauntlets" class="form-control"
           ng-model="armor.gauntlets"
-          ng-options="item.name for item in getItemsForSlot('gauntlets')"
+          ng-options="item.name for item in gauntlets"
         >
           <option value=""></option>
         </select>
@@ -44,7 +44,7 @@
         <label for="leggings" class="control-label">Leggings</label>
         <select id="leggings" class="form-control"
           ng-model="armor.leggings"
-          ng-options="item.name for item in getItemsForSlot('leggings')"
+          ng-options="item.name for item in leggings"
         >
           <option value=""></option>
         </select>
@@ -53,7 +53,7 @@
         <label for="boots" class="control-label">Boots</label>
         <select id="boots" class="form-control"
           ng-model="armor.boots"
-          ng-options="item.name for item in getItemsForSlot('boots')"
+          ng-options="item.name for item in boots"
         >
           <option value=""></option>
         </select>

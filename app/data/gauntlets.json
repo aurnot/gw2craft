@@ -1,0 +1,159 @@
+[
+  {
+    "id" : "berzerker",
+    "name" : "Berzerker - Zojja",
+    "stats" : {
+      "power" : 35,
+      "precision" : 25,
+      "ferocity" : 25
+    }
+  },
+  {
+    "id" : "soldier",
+    "name" : "Soldier - Ahamid",
+    "stats" : {
+      "power" : 35,
+      "toughness" : 25,
+      "vitality" : 25
+    }
+  },
+  {
+    "id" : "valkyrie",
+    "name" : "Valkyrie - Gobrech",
+    "stats" : {
+      "power" : 35,
+      "vitality" : 25,
+      "ferocity" : 25
+    }
+  },
+  {
+    "id" : "assassin",
+    "name" : "Assassin - Saphir",
+    "stats" : {
+      "power" : 25,
+      "precision" : 35,
+      "ferocity" : 25
+    }
+  },
+  {
+    "id" : "rampager",
+    "name" : "Rampager - Forgemaster",
+    "stats" : {
+      "power" : 25,
+      "precision" : 35,
+      "condDamage" : 25
+    }
+  },
+  {
+    "id" : "cavalier",
+    "name" : "Cavalier - Angchu",
+    "stats" : {
+      "power" : 25,
+      "toughness" : 35,
+      "ferocity" : 25
+    }
+  },
+  {
+    "id" : "knight",
+    "name" : "Knight - Beigarth",
+    "stats" : {
+      "power" : 25,
+      "precision" : 25,
+      "toughness" : 35
+    }
+  },
+  {
+    "id" : "settler",
+    "name" : "Settler - Leftpaw",
+    "stats" : {
+      "toughness" : 35,
+      "condDamage" : 25,
+      "healPower" : 25
+    }
+  },
+  {
+    "id" : "sentinel",
+    "name" : "Sentinel - Wei Qi",
+    "stats" : {
+      "power" : 25,
+      "toughness" : 25,
+      "vitality" : 35
+    }
+  },
+  {
+    "id" : "shaman",
+    "name" : "Shaman - Zintl",
+    "stats" : {
+      "vitality" : 35,
+      "condDamage" : 25,
+      "healPower" : 25
+    }
+  },
+  {
+    "id" : "carrion",
+    "name" : "Carrion - Occam",
+    "stats" : {
+      "power" : 25,
+      "vitality" : 25,
+      "condDamage" : 35
+    }
+  },
+  {
+    "id" : "dire",
+    "name" : "Dire - Morbach",
+    "stats" : {
+      "toughness" : 25,
+      "vitality" : 25,
+      "condDamage" : 35
+    }
+  },
+  {
+    "id" : "rabid",
+    "name" : "Rabid - Ferratus",
+    "stats" : {
+      "precision" : 25,
+      "toughness" : 25,
+      "condDamage" : 35
+    }
+  },
+  {
+    "id" : "apothecary",
+    "name" : "Apothecary - Veldrunner",
+    "stats" : {
+      "toughness" : 25,
+      "condDamage" : 25,
+      "healPower" : 35
+    }
+  },
+  {
+    "id" : "cleric",
+    "name" : "Cleric - Tateos",
+    "stats" : {
+      "power" : 25,
+      "toughness" : 25,
+      "healPower" : 35
+    }
+  },
+  {
+    "id" : "magi",
+    "name" : "Magi - Hronk",
+    "stats" : {
+      "precision" : 25,
+      "vitality" : 25,
+      "healPower" : 35
+    }
+  },
+  {
+    "id" : "celestial",
+    "name" : "Celestial - Wupwup",
+    "stats" : {
+      "power" : 16,
+      "precision" : 16,
+      "toughness" : 16,
+      "vitality" : 16,
+      "condDamage" : 16,
+      "healPower" : 16,
+      "ferocity" : 16
+    }
+  }
+]

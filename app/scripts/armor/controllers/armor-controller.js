@@ -10,6 +10,12 @@ angular.module('gw2.armor')
       $scope.armor = calculator.armor;
 
       // expose armor pieces lists
+      $scope.helmets = armory.helmets;
+      $scope.shoulders = armory.shoulders;
+      $scope.chests = armory.chests;
+      $scope.gauntlets = armory.gauntlets;
+      $scope.leggings = armory.leggings;
+      $scope.boots = armory.boots;
       $scope.amulets = armory.amulets;
       $scope.rings = armory.rings;
       $scope.backs = armory.backs;
@@ -19,16 +25,6 @@ angular.module('gw2.armor')
       $scope.$watch('armor', function () {
         calculator.update();
       }, true);
-    };
-
-    /**
-     * Gets a list of available items for the given slot
-     *
-     * @param {String} slot A valid armor slot
-     * @returns {Array}
-     */
-    $scope.getItemsForSlot = function (slot) {
-      return armory.getItemsForSlot(slot);
     };
 
     ctrl.init();
