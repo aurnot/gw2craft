@@ -1,6 +1,26 @@
 'use strict';
 
-angular.module('gw2craftApp')
+angular.module('gw2.game')
+
+  /**
+   * @ngdoc service
+   * @name gw2.game.game
+   * @kind function
+   *
+   * @description
+   * The `game` service is responsible for handling high-level game rules and
+   * functions.
+   *
+   * ** Attributes **
+   * - `professions` (Array): The available professions.
+   *
+   * ** Methods **
+   * - `professionCanWieldWeapon`: Checks if the given profession can wield the
+   *                               given weapon.
+   *
+   * @requires $resource
+   * @requires _
+   */
   .factory('game', function ($resource, _) {
     var professions = $resource('data/professions.json', {}, {
       query : { method : 'GET', params : {}, isArray : true }
@@ -23,6 +43,8 @@ angular.module('gw2craftApp')
 
       return false;
     };
+
+    // ---- Public API ---------------------------------------------------------
 
     return {
       professions : professions,

@@ -5,7 +5,49 @@
     "defense" : 1271,
     "health" : 1645,
     "mainHand" : [ "mace", "sword", "scepter", "greatsword", "hammer", "staff" ],
-    "offHand" : [ "focus", "shield", "torch" ]
+    "offHand" : [ "focus", "shield", "torch" ],
+    "traits": [
+      {
+        "id" : "zeal",
+        "name" : "Zeal",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "radiance",
+        "name" : "Radiance",
+        "stats" : {
+          "precision" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "valor",
+        "name" : "Valod",
+        "stats" : {
+          "toughness" : 50,
+          "ferocity" : 50
+        }
+      },
+      {
+        "id" : "honor",
+        "name" : "Honor",
+        "stats" : {
+          "vitality" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "virtues",
+        "name" : "Virtues",
+        "stats" : {
+          "virtueRecharge" : 5,
+          "boonDuration" : 5
+        }
+      }
+    ]
   },
   {
     "id" : "warrior",
@@ -13,7 +55,49 @@
     "defense" : 1271,
     "health" : 9212,
     "mainHand" : [ "axe", "mace", "sword", "greatsword", "hammer", "longbow", "rifle" ],
-    "offHand" : [ "axe", "mace", "sword", "shield", "warhorn" ]
+    "offHand" : [ "axe", "mace", "sword", "shield", "warhorn" ],
+    "traits" : [
+      {
+        "id" : "strength",
+        "name" : "Strength",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "arms",
+        "name" : "Arms",
+        "stats" : {
+          "precision" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "defense",
+        "name" : "Defense",
+        "stats" : {
+          "toughness" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "tactics",
+        "name" : "Tactics",
+        "stats" : {
+          "vitality" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "discipline",
+        "name" : "Discipline",
+        "stats" : {
+          "burstRecharge" : 5,
+          "ferocity" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "ranger",
@@ -21,7 +105,49 @@
     "defense" : 1118,
     "health" : 5922,
     "mainHand" : [ "axe", "sword", "greatsword", "longbow", "shortbow" ],
-    "offHand" : [ "axe", "dagger", "torch", "warhorn" ]
+    "offHand" : [ "axe", "dagger", "torch", "warhorn" ],
+    "traits": [
+      {
+        "id" : "marksmanship",
+        "name" : "Marksmanship",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "skirmishing",
+        "name" : "Skirmishing",
+        "stats" : {
+          "precision" : 50,
+          "ferocity" : 50
+        }
+      },
+      {
+        "id" : "wildsurvival",
+        "name" : "Wild. Survival",
+        "stats" : {
+          "toughness" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "naturemagic",
+        "name" : "Nature Magic",
+        "stats" : {
+          "vitality" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "beastmastery",
+        "name" : "Beastmastery",
+        "stats" : {
+          "petAttributeBonus" : 5,
+          "healPower" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "engineer",
@@ -29,7 +155,49 @@
     "defense" : 1118,
     "health" : 5922,
     "mainHand" : [ "pistol", "rifle" ],
-    "offHand" : [ "pistol", "shield" ]
+    "offHand" : [ "pistol", "shield" ],
+    "traits" : [
+      {
+        "id" : "explosives",
+        "name" : "Explosives",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "firearms",
+        "name" : "Firearms",
+        "stats" : {
+          "precision" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "inventions",
+        "name" : "Inventions",
+        "stats" : {
+          "toughness" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "alchemy",
+        "name" : "Alchemy",
+        "stats" : {
+          "vitality" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "tools",
+        "name" : "Tools",
+        "stats" : {
+          "beltRecharge" : 5,
+          "ferocity" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "thief",
@@ -37,7 +205,49 @@
     "defense" : 1118,
     "health" : 1645,
     "mainHand" : [ "dagger", "pistol", "sword", "shortbow" ],
-    "offHand" : [ "dagger", "pistol" ]
+    "offHand" : [ "dagger", "pistol" ],
+    "traits" : [
+      {
+        "id" : "deadlyarts",
+        "name" : "Deadly Arts",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "criticalstrikes",
+        "name" : "Critical Strikes",
+        "stats" : {
+          "precision" : 50,
+          "ferocity" : 50
+        }
+      },
+      {
+        "id" : "shadowarts",
+        "name" : "Shadow Arts",
+        "stats" : {
+          "toughness" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "acrobatics",
+        "name" : "Acrobatics",
+        "stats" : {
+          "vitality" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "trickery",
+        "name" : "Trickery",
+        "stats" : {
+          "stealRecharge" : 5,
+          "condDamage" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "mesmer",
@@ -45,7 +255,49 @@
     "defense" : 967,
     "health" : 5922,
     "mainHand" : [ "sword", "scepter", "greatsword", "staff" ],
-    "offHand" : [ "pistol", "sword", "focus", "torch" ]
+    "offHand" : [ "pistol", "sword", "focus", "torch" ],
+    "traits" : [
+      {
+        "id" : "domination",
+        "name" : "Domination",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "dueling",
+        "name" : "Dueling",
+        "stats" : {
+          "precision" : 50,
+          "ferocity" : 50
+        }
+      },
+      {
+        "id" : "chaos",
+        "name" : "Chaos",
+        "stats" : {
+          "toughness" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "inspiration",
+        "name" : "Inspiration",
+        "stats" : {
+          "vitality" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "illusions",
+        "name" : "Illusions",
+        "stats" : {
+          "shatterRecharge" : 5,
+          "condDamage" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "necromancer",
@@ -53,7 +305,49 @@
     "defense" : 967,
     "health" : 9212,
     "mainHand" : [ "axe", "dagger", "scepter", "staff" ],
-    "offHand" : [ "dagger", "focus", "warhorn" ]
+    "offHand" : [ "dagger", "focus", "warhorn" ],
+    "traits" : [
+      {
+        "id" : "spite",
+        "name" : "Spite",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "curses",
+        "name" : "Curses",
+        "stats" : {
+          "precision" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "deathmagic",
+        "name" : "Death Magic",
+        "stats" : {
+          "toughness" : 50,
+          "boonDuration" : 5
+        }
+      },
+      {
+        "id" : "bloodmagic",
+        "name" : "Blood Magic",
+        "stats" : {
+          "vitality" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "soulreaping",
+        "name" : "Soul Reaping",
+        "stats" : {
+          "lifeForcePool" : 5,
+          "ferocity" : 50
+        }
+      }
+    ]
   },
   {
     "id" : "elementalist",
@@ -61,6 +355,48 @@
     "defense" : 967,
     "health" : 1645,
     "mainHand" : [ "dagger", "scepter", "focus", "staff" ],
-    "offHand" : [ "dagger", "focus" ]
+    "offHand" : [ "dagger", "focus" ],
+    "traits" : [
+      {
+        "id" : "firemagic",
+        "name" : "Fire Magic",
+        "stats" : {
+          "power" : 50,
+          "condDuration" : 5
+        }
+      },
+      {
+        "id" : "airmagic",
+        "name" : "Air Magic",
+        "stats" : {
+          "precision" : 50,
+          "ferocity" : 50
+        }
+      },
+      {
+        "id" : "earthmagic",
+        "name" : "Earth Magic",
+        "stats" : {
+          "toughness" : 50,
+          "condDamage" : 50
+        }
+      },
+      {
+        "id" : "watermagic",
+        "name" : "Water Magic",
+        "stats" : {
+          "vitality" : 50,
+          "healPower" : 50
+        }
+      },
+      {
+        "id" : "arcana",
+        "name" : "Arcana",
+        "stats" : {
+          "attunementRecharge" : 5,
+          "boonDuration" : 5
+        }
+      }
+    ]
   }
 ]

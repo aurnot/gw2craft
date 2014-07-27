@@ -58,15 +58,30 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/base-controller.js"></script>
-        <script src="scripts/controllers/profession-controller.js"></script>
-        <script src="scripts/controllers/armor-controller.js"></script>
-        <script src="scripts/controllers/weapon-controller.js"></script>
-        <script src="scripts/directives/gw2-stats.js"></script>
-        <script src="scripts/services/calculator-factory.js"></script>
-        <script src="scripts/services/game-factory.js"></script>
-        <script src="scripts/services/armory.js"></script>
-        <script src="scripts/services/lodash-factory.js"></script>
+
+        <script src="scripts/core/core-module.js"></script>
+        <script src="scripts/core/services/lodash-factory.js"></script>
+
+        <script src="scripts/state/state-module.js"></script>
+
+        <script src="scripts/game/game-module.js"></script>
+        <script src="scripts/game/controllers/base-controller.js"></script>
+        <script src="scripts/game/directives/gw2-stats-directive.js"></script>
+        <script src="scripts/game/services/armory-factory.js"></script>
+        <script src="scripts/game/services/calculator-factory.js"></script>
+        <script src="scripts/game/services/game-factory.js"></script>
+
+        <script src="scripts/profession/profession-module.js"></script>
+        <script src="scripts/profession/controllers/profession-controller.js"></script>
+
+        <script src="scripts/armor/armor-module.js"></script>
+        <script src="scripts/armor/controllers/armor-controller.js"></script>
+
+        <script src="scripts/weapon/weapon-module.js"></script>
+        <script src="scripts/weapon/controllers/weapon-controller.js"></script>
+
+        <script src="scripts/traits/traits-module.js"></script>
+        <script src="scripts/traits/controllers/traits-controller.js"></script>
         <!-- endbuild -->
 </body>
 </html>

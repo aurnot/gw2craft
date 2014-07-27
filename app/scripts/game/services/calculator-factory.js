@@ -120,8 +120,10 @@ angular.module('gw2craftApp')
      * @property {Integer} calculator.baseStats.toughness   Toughness (primary stat)
      * @property {Integer} calculator.baseStats.vitality    Vitality (primary stat)
      * @property {Integer} calculator.baseStats.condDamage  Condition damage (secondary stat)
+     * @property {Integer} calculator.baseStats.condDuration Condition duration (secondary stat)
      * @property {Integer} calculator.baseStats.ferocity    Ferocity (secondary stat)
      * @property {Integer} calculator.baseStats.healPower   Healing power (secondary stat)
+     * @property {Integer} calculator.baseStats.boonDuration Boon duration (secondary stat)
      * @property {Integer} calculator.baseStats.attack      Attack (derived stat)
      * @property {Integer} calculator.baseStats.critChance  Critical chance (derived stat)
      * @property {Integer} calculator.baseStats.critDamage  Critical damage (derived stat)
@@ -141,8 +143,10 @@ angular.module('gw2craftApp')
 
       // secondary
       condDamage : 0,
+      condDuration : 0,
       ferocity: 0,
       healPower : 0,
+      boonDuration : 0,
 
       // derived
       attack : 0,

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gw2craftApp')
+angular.module('gw2.game')
 
   .controller('BaseCtrl', function ($scope, calculator) {
     var ctrl = this;

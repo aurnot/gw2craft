@@ -1,7 +1,33 @@
 'use strict';
 
-angular.module('gw2craftApp')
-  .factory('armory', function($resource, _) {
+angular.module('gw2.game')
+
+  /**
+   * @ngdoc service
+   * @name  gw2.game.armory
+   * @kind function
+   *
+   * @description
+   * The `armory` service provides weapon and armor helpers and generators.
+   *
+   * ** Attributes **
+   * - `accessories` (Array): List of available accessories.
+   * - `amulets` (Array): List of available amulets.
+   * - `backs` (Array): List of available back items.
+   * - `rings` (Array): List of available rings.
+   * - `slots` (Array): List of valid armor slots.
+   * - `armorSets` (Array): List of available armor sets (all the armor pieces
+   *                        for every stats combination).
+   * - `weaponSets` (Array): List of available weapon sets (one-handed and
+   *                         two-handed stats for every stats combinations).
+   * - `weaponTypes` (Array): List of valid weapon types (sword, mace, staff,...)
+   *
+   *
+   * @param  {[type]} $resource [description]
+   * @param  {[type]} _         [description]
+   * @return {[type]}           [description]
+   */
+  .factory('armory', function ($resource, _) {
 
     // stats that use regular values
     var regularStats = ['power', 'precision', 'toughness', 'vitality', 'ferocity', 'condDamage', 'healPower'];
@@ -101,6 +127,8 @@ angular.module('gw2craftApp')
 
       return [oneHanded, twoHanded];
     };
+
+    // ---- Public API ---------------------------------------------------------
 
     return {
 

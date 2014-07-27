@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gw2craftApp')
+angular.module('gw2.armor')
 
   .controller('ArmorCtrl', function ($scope, armory, calculator) {
     var ctrl = this;
